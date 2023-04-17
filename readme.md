@@ -87,25 +87,16 @@ School project voor de HVA. Het doel is om een matching app te creeren.
 
 ### Built With
 
-- [![HTML]]
-- [![CSS]]
-- [![Javascript]]
-- [![Node]]
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+- ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
-
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+Dont really know yet
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,10 +104,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Nested Feature
+- [ ] Feature 1?
+- [ ] Feature 2?
+- [ ] Feature 3?
 
 See the [open issues](https://github.com/kryxeno/blok-tech/issues) for a full list of proposed features (and known issues).
 
@@ -159,9 +149,7 @@ Project Link: [https://github.com/kryxeno/blok-tech](https://github.com/kryxeno/
 
 ## Acknowledgments
 
-- []()
-- []()
-- []()
+- nobody
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -179,7 +167,7 @@ Project Link: [https://github.com/kryxeno/blok-tech](https://github.com/kryxeno/
 [license-shield]: https://img.shields.io/github/license/kryxeno/blok-tech.svg?style=for-the-badge
 [license-url]: https://github.com/kryxeno/blok-tech/blob/master/LICENSE.txt
 [product-screenshot]: images/screenshot.png
-[nde.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[node.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [node-url]: https://nodejs.org/
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [react-url]: https://reactjs.org/
