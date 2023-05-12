@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "name": "Hendrik Kaasmaker",
+    "job": "Kaasboer",
+    "image": "/example_person.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Evert",
+    "job": "Comedian",
+    "image": "/example_person_2.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Sjoerd",
+    "job": "Makelaar",
+    "image": "/example_person_3.jpg"
+  }
+]

@@ -14,6 +14,9 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
+    <script id="page" type="application/json">
+      <%- JSON.stringify(user) %>
+    </script>
     <section class="current-card">
       <header>
         <h1><%= user?.name %></h1>
