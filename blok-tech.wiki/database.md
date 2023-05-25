@@ -1,10 +1,9 @@
 # Database Structure
 
-Write about you modelled your database.
+My user objects have a large amount of data, including integers, objects, array's, strings, etc...
 
-* What data types are you using based on your input fields?
-* How did you structure your database (datamodel)?
-* What does the document structure look like in MongoDB?
-* Did you use multiple collections?
+I just looked at what I needed for my datamodels and made them accordingly.
 
-It can be helpful to visualize the database with diagrams or screenshots of your cluster.
+I have a users collection and a viewer collection. The users collection is for all the people the viewer will see. The viewer collection keeps track of what users it has seen, and updates everything accordingly.
+
+![ja](./images/users.png)

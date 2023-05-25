@@ -1,3 +1,3 @@
 # Feedback
 
-This page can be used to document feedback your received from teachers or students.
+I haven't really recieved much feedback as of yet, other than it's looking good just keep going.

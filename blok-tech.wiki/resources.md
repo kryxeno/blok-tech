@@ -1,3 +1,7 @@
 # Resources
 
-This page can be used to cite the sources you used when writing this wiki.
+https://ejs.co/
+https://fakerjs.dev/
+HVA
+https://chat.openai.com/
+https://mongodb.com

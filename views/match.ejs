@@ -18,7 +18,7 @@
     </script>
     <main>
       <% users.forEach(user => { %>
-        <div><%= JSON.stringify(user.job) %>  <%= JSON.stringify(user.firstName) %></div>
+        <div><%= user.job %> ------------ <%= user.firstName %></div>
       <% }); %>
     </main>
   </body>
