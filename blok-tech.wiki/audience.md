@@ -1,13 +1,15 @@
 # Target Audience
 
-Think about your target audience. It always helps to have one core audience you will be designing for. For example; sport fanatics to match people based on sports, netflixers to match people based on what series they want to watch etc. 
+The target audience for this app is people in the job market. This can be a company that is posting a job application, or an individual who is looking for a job.
 
-- What do you know about these people
-- What are their wishes and challenges? 
-- Can you find more information about them online? 
-- Can you talk to a few members of your target audience to ask them what they think is important?
+# Individual
 
-Methods that can be used for research:
-* https://cmdmethods.nl/cards/stepping-stones/empathy-map
-* https://cmdmethods.nl/cards/field/interview
-* https://cmdmethods.nl/cards/field/focus-group
+Individuals only want to see the jobs that match their criteria. This can include job field, salary, parttime/fulltime, etc..
+
+I myself have used these services and I find that it is very important to be able to rule out unnecessary posts. Otherwise you are just wasting your time.
+
+# Company
+
+This is usually an HR representative or team manager that is making the job posting and the one who will be using the app to filter through the various applicants.
+
+They want to get a good feel for an applicant, along with any degrees and/or certifications.

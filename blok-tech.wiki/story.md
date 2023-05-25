@@ -1,6 +1,17 @@
 # Job Story
 
-Write ~5 (or more) Job Stories (to generate ideas) and pick one to continue working on. Also explain what features you looked at from other matching applications. Clearly explain why you decided to pick one Job Story to continue working on as a feature.
+![ja](./images/job-stories.jpeg)
 
-Methods that can be used for research:
-* https://jtbd.info/replacing-the-user-story-with-the-job-story-af7cdee10c27
+1. Wanneer ik een app open wil ik een account aan kunnen maken, omdat ik mijn gegevens op wil slaan. (Account)
+
+2. Wanneer de match is vastgesteld wil ik een bericht kunnen sturen zodat ik het doel van de app kan bereiken. (Chat)
+
+3. Wanneer ik meerdere gebruikers zie wil ik deze kunnen matchen of afwijzen zodat ik potentieel kan matchen met het juist persoon. (Match)
+
+4. Wanneer ik een account heb aangemaakt wil ik in kunnen loggen zodat ik in de app voledig kan gebruiken. (Account)
+
+5. Wanneer ik in ben gelogd wil ik mijn voorkeuren ergens instellen en opslaan zodat ik de juiste matches kan vinden. (Settings)
+
+# My feature
+
+I have chosen to make the third job story. Matching a company with an applicant.
