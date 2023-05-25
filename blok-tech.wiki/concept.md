@@ -15,7 +15,7 @@ I have selected two companies that show jobs for the individual.
 
 Jobr is a platform where people looking for a job can filter through various jobs and apply.
 
-![ja](./images/jobr.jpeg)
+![ja](./images/jobr.png)
 
 Good practices:
 
@@ -26,7 +26,7 @@ Bad practices:
 
 - The call to action is hidden lower in the detail page, instead of high on the page.
 
-![ja](./images/jobr2.jpeg)
+![ja](./images/jobr2.png)
 
 Indeed is the largest job application website on the internet. Similarly to Jobr they allow a user to filter jobs and apply.
 

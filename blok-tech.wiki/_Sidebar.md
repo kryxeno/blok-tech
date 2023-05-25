@@ -13,6 +13,7 @@
 - [Local Dev Environment](https://github.com/kryxeno/blok-tech/wiki/local)
 - [Linters and Standards](https://github.com/kryxeno/blok-tech/wiki/linters)
 - [Deployment](https://github.com/kryxeno/blok-tech/wiki/deployment)
+- [JsRules](https://github.com/kryxeno/blok-tech/wiki/jsrules)
 
 ## Server-side
 

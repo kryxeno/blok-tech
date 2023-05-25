@@ -1,8 +1,11 @@
 const express = require("express");
 const db = require("./utils/database");
+const faker = require("./server/faker");
 const app = express();
 const port = 3000;
 app.use(express.static("public"));
+const apiRoutes = require("./api/api");
+app.use("/", apiRoutes);
 
 app.set("views", "./views");
 app.set("view engine", "ejs");
@@ -13,14 +16,18 @@ let users = [];
 (async () => {
   try {
     client = await db.connectDatabase();
-    users = await db.getAllData(client, "match", "users");
   } catch (error) {
     console.log(error);
   }
 
-  app.get("/:id", (req, res) => {
-    const user = users.find((user) => user.user_id === req.params.id);
-    res.render("index", { user });
+  app.get("/", async (req, res) => {
+    users = await db.getAllData("match", "users");
+    res.render("index", { users });
+  });
+
+  app.get("/match", async (req, res) => {
+    users = await db.getAllData("match", "users");
+    res.render("match", { users });
   });
 
   app.get("/info", (req, res) => {

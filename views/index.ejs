@@ -4,49 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kaas</title>
+    <title>Home</title>
     <link rel="stylesheet" href="/normalize.css" type="text/css" />
-    <link rel="stylesheet" href="..node-modules/css-init/dist/init.min.css" />
-    <link rel="stylesheet" href="/card.css" type="text/css" />
+    <link rel="stylesheet" href="/style.css" type="text/css" />
     <link rel="stylesheet" href="https://use.typekit.net/ulx6jeq.css" />
-    <link rel="stylesheet" href="/buttons.css" type="text/css" />
     <script src="/script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
+  <%- include('header', {tab: 1}); %>
   <body>
     <script id="page" type="application/json">
-      <%- JSON.stringify(user) %>
+      <%- JSON.stringify(users) %>
     </script>
-    <section class="current-card">
-      <header>
-        <h1><%= user?.name %></h1>
-        <h2><%= user?.job %></h2>
-      </header>
-      <figure class="banner">
-        <img src="<%= user?.image %>" alt="Something" />
-      </figure>
-      <div class="resume">
-        <table>
-          <thead>
-            <tr>
-              <th>Kaas</th>
-              <th>Kaas</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Boter</td>
-              <td>Boter</td>
-            </tr>
-            <tr>
-              <td>Boter</td>
-              <td>Boter</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <footer>Information</footer>
+    <section class="card">
+      <a href="/match">
+        <h2>Manage applicants: </h2><span><%- users.length %></span>
+        <img src="/images/match.svg" alt="Matches" />
+      </a>
+      <a href="#">
+        <h2>Start searching for a job</h2>
+        <img src="/images/search.svg" alt="Matches" />
+      </a>
+      <a href="#" class="half">
+        <img src="/images/profile.svg" alt="Matches" />
+      </a>
+      <a href="#" class="half">
+        <img src="/images/contact.svg" alt="Matches" />
+      </a>
+      <button id="generate-applicants">
+        <h2>Generate new applicants</h2>
+        <img src="/images/contact.svg" alt="Matches" />
+      </button>
     </section>
-    <%- include('match_buttons', {user: user}); %>
   </body>
+  <%- include('footer', {tab: 1}); %>
 </html>

@@ -1,8 +1,5 @@
 # Linters
 
-Write about how you implemented linters and how you researched them.
+I have used prettier eslint for a good while now, so I just kept using that one. I have also used regular eslint in the past but I found that the combination of prettier and eslint is the nicest for me.
 
-* What linters did you research and why did you chose a specific linter to install into your project?
-* What formatters did you research and why did you chose a specific linter to install into your project?
-* How are your linters and formatters being used? Through NPM run script? With an extension in your code editor?
-* How did you configure the linters and what rules are you using?
+My linter is set to work on save. I don't change the rules in any way so I dont really have the need for a script.

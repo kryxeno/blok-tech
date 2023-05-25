@@ -13,3 +13,11 @@ html {
   font-weight: 400;
   font-style: normal;
 }
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --primary-color: #ff7d80;
+}

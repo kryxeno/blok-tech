@@ -1,10 +1,10 @@
 # Local Dev Environment
 
-Write about your local development set-up.
+# Editor
 
-* What code editor do you use and why? Tried any different editor?
-* What themes and fonts are you using and why?
-* Do you use any specific extensions that you find handy?
-* Did you tweak your settings.json in your code editor do enable / disable features?
-* Do you have any custom dotfiles?
-* Did you change your CLI (shell), change your prompt, create aliases?
+Before CMD I used sublime text 3 (because I saw it in a tutorial once). I currently use VSCode like everyone else.
+I use the standard font and the theme that I use is 'SynthWave '84'.
+I use about 40 extensions that I use for school or work. The ones I rely on most are probably prettier/prettiereslint, all the code snippets extensions and recently decided to get copilot. The all time top extension is probably git lens so that I can see which coworker to can blame when I see bad code :) (or if I don't understand something I know who to ask).
+Yeah I have a custom prettier setup, but I use the standard linting setup. For most projects at work I just use the settings in the repo.
+I dont think I have any custom dot files (unless you mean .env or .gitignore).
+I haven't really customize my CLI.

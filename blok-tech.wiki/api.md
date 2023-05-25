@@ -1,9 +1,16 @@
 # API's
 
-Write about what client or third party you researched and why you used specific API's for your feature.
+# Web API
 
-* What web API's did you find that could be implemented in your project?
-* What third party API's did you find that could be implemented in your project? Why did you choose your specific API? Based on documentation? Based on ease of use?
-* Did the API hav exactly the data you were looking for or did you need to combine multiple API calls?
-* How does the web API work?
-* If you are using a third-party API how does it work? Do you need extensive authentication to interact with it?
+I will look at what web API's I have used after I finished the project.
+
+I will probably use the url API for queries, touch API, dom API and pointer events API.
+
+# Third Party API
+
+I will use the Fakerjs third party api to populate my database with fake people.
+I am going to use this api because I have used it at work in the past, and I don't want to fill my own database by hand.
+I want to add a button that adds more potential applicants to simulate real-life conditions.
+With this API you can basically call a function that randomly generates a piece of data for you, and they have a library of different types.
+You need to call the API for each individual field, and I don't think node bundles those calls together. In that case I did make multiple calls.
+This API doesn't require any authentication.
