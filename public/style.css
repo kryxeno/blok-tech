@@ -2,13 +2,14 @@ body {
   background-color: #fff;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
-header {
+body > header {
   background-color: black;
   width: 100%;
 }
-header nav {
+body > header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,34 +18,34 @@ header nav {
   font-size: 1.5rem;
   font-weight: bold;
 }
-header nav > section {
+body > header nav > section {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   width: 100%;
 }
-header nav input[type=checkbox] {
+body > header nav input[type=checkbox] {
   display: none;
 }
-header nav label {
+body > header nav label {
   width: 2rem;
   height: 2rem;
   display: block;
   background-color: black;
 }
-header nav label span {
+body > header nav label span {
   width: 100%;
   height: 0.3rem;
   background-color: white;
 }
-header nav button {
+body > header nav button {
   background-color: transparent;
   border: none;
   border-radius: 0;
   cursor: pointer;
 }
-header nav ul {
+body > header nav ul {
   position: fixed;
   z-index: 100000000;
   height: 100%;
@@ -59,18 +60,18 @@ header nav ul {
   flex-direction: column;
   gap: 1rem;
 }
-header nav ul li {
+body > header nav ul li {
   height: fit-content;
   width: 15rem;
   border-radius: 3px;
   border: 1px solid white;
 }
-header nav ul li button:first-child {
+body > header nav ul li button:first-child {
   display: flex;
   justify-content: center;
 }
-header nav ul a,
-header nav ul button {
+body > header nav ul a,
+body > header nav ul button {
   color: white;
   text-decoration: none;
   width: 100%;
@@ -82,24 +83,24 @@ header nav ul button {
   gap: 2rem;
 }
 
-footer {
+body > footer {
   background-color: black;
   width: 100%;
   position: fixed;
   bottom: 0;
   border-radius: 1.3rem 1.3rem 0 0;
 }
-footer ul {
+body > footer ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 0 2rem;
 }
-footer ul a {
+body > footer ul a {
   display: block;
   padding: 1rem;
 }
-footer ul a img {
+body > footer ul a img {
   width: 2rem;
 }
 
@@ -178,55 +179,211 @@ footer ul a img {
   transform: translateX(-100%);
 }
 
-.current-card {
-  height: 45rem;
-  width: 30rem;
+.cv {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
   flex-direction: column;
-  background-color: lightgray;
+  gap: 1rem;
+  padding: 2rem 2rem;
+  height: 90dvh;
+  scroll-snap-align: start;
+}
+.cv main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.cv header,
+.cv section.skills,
+.cv section.education {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 1rem;
+  background-color: white;
   -webkit-box-shadow: 9px 10px 29px -4px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 9px 10px 29px -4px rgba(0, 0, 0, 0.15);
   box-shadow: 9px 10px 29px -4px rgba(0, 0, 0, 0.15);
-  padding: 3rem;
   border-radius: 1rem;
+  gap: 1rem;
+  border: 1px solid lightgrey;
+  text-decoration: none;
+  color: black;
+}
+.cv header {
+  height: 6rem;
+}
+.cv header h1 {
+  font-weight: 400;
+}
+.cv header h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.cv header img {
+  filter: invert(1);
+  width: 4rem;
+  border-radius: 50%;
+}
+.cv .jobs {
+  grid-column: span 2;
+}
+.cv .jobs ol {
+  list-style: none;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+}
+.cv .jobs ol li {
+  width: 100%;
+  padding: 1rem;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  gap: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  -webkit-box-shadow: 9px 10px 29px -4px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 9px 10px 29px -4px rgba(0, 0, 0, 0.15);
+  box-shadow: 9px 10px 29px -4px rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  border: 1px solid lightgrey;
+  text-decoration: none;
+  color: black;
+}
+.cv .jobs ol li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+.cv .jobs ol li img {
+  filter: invert(1);
+  height: 1.5rem;
+}
+.cv .jobs ol li div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 0.5rem;
 }
-
-.banner {
-  max-width: 100%;
+.cv .jobs ol li div:nth-child(2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
 }
-
-.banner img {
+.cv .jobs ol li div:last-child {
+  margin-top: auto;
+}
+.cv section.skills,
+.cv section.education {
+  grid-column: span 1;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.cv section.skills h3,
+.cv section.education h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.cv section.skills p,
+.cv section.education p {
+  text-transform: capitalize;
+}
+.cv section.skills ul {
   width: 100%;
-  border-radius: 1rem;
+}
+.cv section.skills div {
+  display: flex;
+  justify-content: space-between;
+}
+.cv section.education ul {
+  max-height: 15rem;
+  overflow-y: auto;
+}
+.cv section.education li {
+  margin-bottom: 0.5rem;
 }
 
-.matching-btns {
+.buttons {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.buttons button {
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 1rem;
+  padding: 1rem 0;
+  cursor: pointer;
+  -webkit-box-shadow: 9px 10px 29px -4px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 9px 10px 29px -4px rgba(0, 0, 0, 0.15);
+  box-shadow: 9px 10px 29px -4px rgba(0, 0, 0, 0.15);
+}
+.buttons button.btn-save {
+  background: rgb(33, 233, 83);
+}
+.buttons button.btn-ignore {
+  background: rgb(214, 49, 49);
+}
+.buttons button.btn-ignore img {
+  filter: invert(1);
+}
+.buttons button img {
+  width: 2rem;
+}
+
+.cv-list {
+  overflow-y: auto;
+  transition: all 0.3s;
+  padding-bottom: 5rem;
+  height: 100%;
+  scroll-snap-points-y: repeat(90dvh);
+  scroll-snap-type: y mandatory;
+}
+.cv-list.animated-scroll {
+  overflow: hidden;
+  height: unset;
+}
+
+.end {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30rem;
-  height: fit-content;
-  gap: 5rem;
+  flex-direction: column;
+  height: 90dvh;
+  gap: 1rem;
 }
-
-.btn-accept,
-.btn-ignore {
-  aspect-ratio: 1/1;
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  font-size: 2rem;
+.end a {
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  -webkit-box-shadow: 9px 10px 29px -4px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 9px 10px 29px -4px rgba(0, 0, 0, 0.15);
+  box-shadow: 9px 10px 29px -4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  gap: 1rem;
 }
-
-.btn-accept {
-  background-color: rgb(37, 211, 37);
-}
-
-.btn-ignore {
-  background-color: rgb(221, 47, 47);
+.end a img {
+  filter: invert(1);
 }
 
 /*# sourceMappingURL=style.css.map */

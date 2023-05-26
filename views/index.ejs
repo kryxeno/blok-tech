@@ -11,14 +11,14 @@
     <script src="/script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
-  <%- include('header', {tab: 1}); %>
   <body>
     <script id="page" type="application/json">
-      <%- JSON.stringify(users) %>
+      <%- JSON.stringify(filteredUsers) %>
     </script>
-    <section class="card">
+    <%- include('header', {tab: 1}); %>
+    <main class="card">
       <a href="/match">
-        <h2>Manage applicants: </h2><span><%- users.length %></span>
+        <h2>Manage applicants: </h2><span><%- filteredUsers.length %></span>
         <img src="/images/match.svg" alt="Matches" />
       </a>
       <a href="#">
@@ -28,14 +28,14 @@
       <a href="#" class="half">
         <img src="/images/profile.svg" alt="Matches" />
       </a>
-      <a href="#" class="half">
+      <a href="contacts" class="half">
         <img src="/images/contact.svg" alt="Matches" />
       </a>
       <button id="generate-applicants">
         <h2>Generate new applicants</h2>
         <img src="/images/contact.svg" alt="Matches" />
       </button>
-    </section>
+    </main>
+    <%- include('footer', {tab: 1}); %>
   </body>
-  <%- include('footer', {tab: 1}); %>
 </html>

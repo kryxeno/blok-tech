@@ -22,20 +22,30 @@ let users = [];
 
   app.get("/", async (req, res) => {
     users = await db.getAllData("match", "users");
-    res.render("index", { users });
+    const companyUser = await db.getAllData("match", "company_user");
+    const filteredUsers = users.filter(
+      (user) => !companyUser[0].viewedApplications.includes(user._id.toString())
+    );
+
+    res.render("index", { filteredUsers });
   });
 
   app.get("/match", async (req, res) => {
     users = await db.getAllData("match", "users");
-    res.render("match", { users });
+    const companyUser = await db.getAllData("match", "company_user");
+    const filteredUsers = users.filter(
+      (user) => !companyUser[0].viewedApplications.includes(user._id.toString())
+    );
+    res.render("match", { filteredUsers });
   });
 
-  app.get("/info", (req, res) => {
-    res.send("boter");
-  });
-
-  app.get("/about", (req, res) => {
-    res.send("boter");
+  app.get("/contacts", async (req, res) => {
+    users = await db.getAllData("match", "users");
+    const companyUser = await db.getAllData("match", "company_user");
+    const filteredUsers = users.filter((user) =>
+      companyUser[0].savedApplications.includes(user._id.toString())
+    );
+    res.render("contacts", { filteredUsers });
   });
 
   // error handling

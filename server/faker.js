@@ -8,7 +8,7 @@ const createFakeJobs = (amount) => {
     const job = {
       title: faker.person.jobTitle(),
       location: faker.location.city(),
-      description: faker.person.jobDescriptor(),
+      description: faker.lorem.lines({ min: 1, max: 2 }),
       startYear: startYear,
       endYear: startYear + faker.number.int({ min: 1, max: 10 }),
       reference: faker.internet.email(),
@@ -35,6 +35,19 @@ const createFakeEducation = (amount) => {
   return education;
 };
 
+const createFakeSkills = (amount) => {
+  const skills = [];
+
+  for (let i = 0; i < amount; i++) {
+    const skill = {
+      title: faker.hacker.adjective(),
+      level: faker.number.int({ min: 1, max: 10 }),
+    };
+    skills.push(skill);
+  }
+  return skills;
+};
+
 const createFakeApplicants = (amount) => {
   const applicants = [];
   for (let i = 0; i < amount; i++) {
@@ -47,10 +60,11 @@ const createFakeApplicants = (amount) => {
       image: faker.image.avatar(),
       jobs: createFakeJobs(faker.number.int({ min: 2, max: 5 })),
       education: createFakeEducation(faker.number.int({ min: 2, max: 5 })),
+      skills: createFakeSkills(faker.number.int({ min: 2, max: 5 })),
     };
     applicants.push(applicant);
   }
   return applicants;
 };
 
-module.exports = { createFakeApplicants, createFakeEducation, createFakeJobs };
+module.exports = { createFakeApplicants };

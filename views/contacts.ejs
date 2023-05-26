@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Matching</title>
+    <title>Saved Applications</title>
     <link rel="stylesheet" href="/normalize.css" type="text/css" />
     <link rel="stylesheet" href="/style.css" type="text/css" />
     <link rel="stylesheet" href="https://use.typekit.net/ulx6jeq.css" />
     <script src="/script.js" defer></script>
-    <script src="/matchScript.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <script id="page" type="application/json">
       <%- JSON.stringify(filteredUsers) %>
     </script>
+    <%- include('header', {tab: 3}); %>
     <main class="cv-list">
       <% filteredUsers.forEach((user, index) => { %>
         <section class="cv">
@@ -80,27 +80,10 @@
                 <% }); %>
               </ul>
             </section>
-            <section class="buttons">
-              <button class="btn-ignore" data-id="<%- user._id %>" data-index="<%- index %>">
-                <img src="/images/close.svg" alt="ignore" />
-              </button>
-              <button class="btn-save" data-id="<%- user._id %>" data-index="<%- index %>">
-                <img src="/images/save.svg" alt="save" />
-              </button>
-            </section>
           </main>
         </section>
       <% }); %>
-      <section class="end">
-        <h1>
-          You have reached the end!
-        </h1>
-        <a href="/contacts">
-          Take a look at your saved applications
-          <img src="/images/contact.svg" alt="Contacts"/>
-        </a>
-      </section>
     </main>
-    <%- include('footer', {tab: 2}); %>
+    <%- include('footer', {tab: 3}); %>
   </body>
 </html>

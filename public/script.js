@@ -1,7 +1,5 @@
 const menuBtn = document.querySelectorAll("header nav button");
 const menu = document.querySelector("header nav ul");
-const acceptBtn = document.querySelector(".btn-accept");
-const ignoreBtn = document.querySelector(".btn-ignore");
 const generateBtn = document.getElementById("generate-applicants");
 
 const dataset = document.getElementById("page").textContent;
@@ -30,18 +28,4 @@ menuBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     menu.classList.toggle("closed");
   });
-});
-
-acceptBtn?.addEventListener("click", () => {
-  console.log("yay");
-  if (user.user_id === "3") return;
-  const newId = parseInt(user.user_id) + 1;
-  location.href = `/${newId}`;
-});
-
-ignoreBtn?.addEventListener("click", () => {
-  console.log("nooooo");
-  if (user.user_id === "1") return;
-  const newId = parseInt(user.user_id) - 1;
-  location.href = `/${newId}`;
 });

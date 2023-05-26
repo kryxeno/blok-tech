@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_NAME}.lidqbyt.mongodb.net/?retryWrites=true&w=majority`;
 var client;
 
@@ -49,4 +49,29 @@ const getAllData = async (database, collection, sort) => {
   return data;
 };
 
-module.exports = { connectDatabase, insertOne, insertMany, getAllData };
+const updateOne = async (database, collection, field, update) => {
+  try {
+    const db = client.db(database);
+    const updateObject = {};
+    updateObject[field] = update;
+    console.log(updateObject);
+    const response = await db
+      .collection(collection)
+      .updateOne(
+        { _id: new ObjectId("646ffa73ddb70af17807e4e7") },
+        { $push: updateObject }
+      );
+    return response;
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
+};
+
+module.exports = {
+  connectDatabase,
+  insertOne,
+  insertMany,
+  updateOne,
+  getAllData,
+};
