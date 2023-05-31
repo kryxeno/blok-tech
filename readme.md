@@ -58,18 +58,9 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -77,7 +68,17 @@
 
 ## About The Project
 
-School project voor de HVA. Het doel is om een matching app te creeren.
+This is a school project for the HVA. I was tasked with making a feature for a matching application.
+
+My feature is the matching / managing of applications in a job finding app.
+
+Companies can match with individuals, thus finding relevant applicants for the job posting.
+
+### Current features
+
+- The user can generate new applications (for demonstrating purposes).
+- The user can either ignore or save an application to their contacts.
+- The user can look at their saved applications and remove them from their contacts.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,36 +93,29 @@ School project voor de HVA. Het doel is om een matching app te creeren.
 
 ## Usage
 
-Dont really know yet
+Download the zip from this repo.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Install node via the command:
 
-<!-- ROADMAP -->
+```
+node i
+```
 
-## Roadmap
+Install all the necessary packages with:
 
-- [ ] Feature 1?
-- [ ] Feature 2?
-- [ ] Feature 3?
+```
+npm i
+```
 
-See the [open issues](https://github.com/kryxeno/blok-tech/issues) for a full list of proposed features (and known issues).
+Ask for database credentials or create your own.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+To start the application use the command:
 
-<!-- CONTRIBUTING -->
+```
+npm run dev
+```
 
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+You can find the application here: [localhost:3000](localhost:3000)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -138,14 +132,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Project Link: [https://github.com/kryxeno/blok-tech](https://github.com/kryxeno/blok-tech)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
-
-## Acknowledgments
-
-- nobody
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
