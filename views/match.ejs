@@ -81,12 +81,20 @@
               </ul>
             </section>
             <section class="buttons">
-              <button class="btn-ignore" data-id="<%- user._id %>" data-index="<%- index %>">
-                <img src="/images/close.svg" alt="ignore" />
-              </button>
-              <button class="btn-save" data-id="<%- user._id %>" data-index="<%- index %>">
-                <img src="/images/save.svg" alt="save" />
-              </button>
+              <form method="post">
+                <input type="hidden" name="type" value="seen">
+                <input type="hidden" name="userId" value="<%- user._id %>">
+                <button type="submit" class="btn-ignore" data-id="<%- user._id %>" data-index="<%- index %>">
+                  <img src="/images/close.svg" alt="ignore" />
+                </button>
+              </form>
+              <form method="post">
+                <input type="hidden" name="type" value="saved">
+                <input type="hidden" name="userId" value="<%- user._id %>">
+                <button type="submit" class="btn-save" data-id="<%- user._id %>" data-index="<%- index %>">
+                  <img src="/images/save.svg" alt="save" />
+                </button>
+              </form>
             </section>
           </main>
         </section>

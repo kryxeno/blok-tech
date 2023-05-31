@@ -17,15 +17,19 @@ const connectDatabase = async () => {
 };
 
 const insertOne = async (database, collection, data) => {
-  const db = client.db(database);
-  const response = await db.collection(collection).insertOne(data);
-  return response;
+  try {
+    const db = client.db(database);
+    const response = await db.collection(collection).insertOne(data);
+    return response;
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
 };
 
 const insertMany = async (database, collection, data) => {
-  console.log(client);
-  const db = client.db(database);
   try {
+    const db = client.db(database);
     const response = await db
       .collection(collection)
       .insertMany(data, function (err, result) {
@@ -44,9 +48,14 @@ const insertMany = async (database, collection, data) => {
 };
 
 const getAllData = async (database, collection, sort) => {
-  const db = client.db(database);
-  const data = await db.collection(collection).find().sort(sort).toArray();
-  return data;
+  try {
+    const db = client.db(database);
+    const data = await db.collection(collection).find().sort(sort).toArray();
+    return data;
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
 };
 
 const updateOne = async (database, collection, field, update) => {
@@ -68,10 +77,30 @@ const updateOne = async (database, collection, field, update) => {
   }
 };
 
+const deleteOne = async (database, collection, field, update) => {
+  try {
+    const db = client.db(database);
+    const updateObject = {};
+    updateObject[field] = update;
+    console.log(updateObject);
+    const response = await db
+      .collection(collection)
+      .updateOne(
+        { _id: new ObjectId("646ffa73ddb70af17807e4e7") },
+        { $pull: updateObject }
+      );
+    return response;
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
+};
+
 module.exports = {
   connectDatabase,
   insertOne,
   insertMany,
   updateOne,
   getAllData,
+  deleteOne,
 };

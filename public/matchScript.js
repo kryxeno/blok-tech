@@ -6,9 +6,7 @@ cvList.classList.add("animated-scroll");
 
 const updateSeen = async (id) => {
   const res = await axios
-    .post(`/api/update-seen`, {
-      id: id,
-    })
+    .post(`/api/update-seen/${id}`)
     .then((response) => {
       console.log(response.data);
     })
@@ -19,7 +17,7 @@ const updateSeen = async (id) => {
 
 const updateSaved = async (id) => {
   const res = await axios
-    .post(`/api/update-saved`, {
+    .post(`/api/update-saved/${id}`, {
       id: id,
     })
     .then((response) => {
@@ -36,22 +34,21 @@ const skipToNextApplication = (index) => {
 };
 
 ignoreBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
     const userId = btn.getAttribute("data-id");
     const userIndex = btn.getAttribute("data-index");
     skipToNextApplication(userIndex);
-    console.log("clicked");
     updateSeen(userId);
   });
 });
 
 saveBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
     const userId = btn.getAttribute("data-id");
     const userIndex = btn.getAttribute("data-index");
     skipToNextApplication(userIndex);
-    console.log("clicked");
-    updateSeen(userId);
     updateSaved(userId);
   });
 });

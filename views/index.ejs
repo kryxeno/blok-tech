@@ -18,7 +18,7 @@
     <%- include('header', {tab: 1}); %>
     <main class="card">
       <a href="/match">
-        <h2>Manage applicants: </h2><span><%- filteredUsers.length %></span>
+        <h2>Manage applicants: <span id="matches-number"><%- filteredUsers.length %></span></h2>
         <img src="/images/match.svg" alt="Matches" />
       </a>
       <a href="#">
@@ -31,10 +31,16 @@
       <a href="contacts" class="half">
         <img src="/images/contact.svg" alt="Matches" />
       </a>
-      <button id="generate-applicants">
-        <h2>Generate new applicants</h2>
-        <img src="/images/contact.svg" alt="Matches" />
-      </button>
+      <form method="post">
+        <input type="hidden" name="type" value="generate">
+        <button id="generate-applicants" type="submit">
+          <div>
+            <h2>Generate new applicants</h2>
+            <input type="hidden" name="amount" value="5">
+          </div>
+          <img src="/images/contact.svg" alt="Matches" />
+        </button>
+      </form>
     </main>
     <%- include('footer', {tab: 1}); %>
   </body>

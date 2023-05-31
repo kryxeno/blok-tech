@@ -15,7 +15,6 @@
     <script id="page" type="application/json">
       <%- JSON.stringify(filteredUsers) %>
     </script>
-    <%- include('header', {tab: 3}); %>
     <main class="cv-list">
       <% filteredUsers.forEach((user, index) => { %>
         <section class="cv">
@@ -80,10 +79,28 @@
                 <% }); %>
               </ul>
             </section>
+            <section class="buttons">
+              <form method="post">
+                <input type="hidden" name="type" value="delete">
+                <input type="hidden" name="userId" value="<%- user._id %>">
+                <button type="submit" class="btn-ignore" id="delete-saved" data-id="<%- user._id %>" data-index="<%- index %>">
+                  <img src="/images/close.svg" alt="ignore" />
+                </button>
+              </form>
+            </section>
           </main>
         </section>
       <% }); %>
+      <section class="end">
+        <h1>
+          You don't have any matches
+        </h1>
+        <a href="/match">
+          Start matching with applicants!
+          <img src="/images/contact.svg" alt="Contacts"/>
+        </a>
+      </section>
     </main>
-    <%- include('footer', {tab: 3}); %>
+    <%- include('footer', {tab: 2}); %>
   </body>
 </html>
