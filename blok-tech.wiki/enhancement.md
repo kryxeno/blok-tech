@@ -26,4 +26,4 @@ The JS was fully functional, as it is a pretty static site. It only displays art
 # Implementation in my project
 
 Since I am doing a matching feature, I think I will just display all the items under each other with all the relevant information still there.
-Frontend javascript is still pretty integral to the function of my page, as people cant save applicants or update the posts they have seen, but they would still be able to see the information of the applicant and contact them in a different way.
+Frontend javascript is still pretty integral, but I can use a form fallback to make sure the page still functions without javascript.

@@ -8,7 +8,7 @@ const createFakeJobs = (amount) => {
     const job = {
       title: faker.person.jobTitle(),
       location: faker.location.city(),
-      description: faker.lorem.lines({ min: 1, max: 2 }),
+      description: faker.lorem.lines({ min: 1, max: 1 }),
       startYear: startYear,
       endYear: startYear + faker.number.int({ min: 1, max: 10 }),
       reference: faker.internet.email(),

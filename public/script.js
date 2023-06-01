@@ -3,6 +3,7 @@ const menu = document.querySelector("header nav ul");
 const generateBtn = document.getElementById("generate-applicants");
 const deleteSaved = document.querySelectorAll("#delete-saved");
 const matchesNumber = document.getElementById("matches-number");
+const funnyFact = document.querySelector(".funny-fact");
 
 const dataset = document.getElementById("page").textContent;
 let pageData;
@@ -14,14 +15,33 @@ try {
 
 console.log(pageData ?? "no data");
 
-generateBtn?.addEventListener("click", (e) => {
+const generateFact = async (number) => {
+  const res = await axios
+    .get(`http://numbersapi.com/${number}`)
+    .then((response) => {
+      funnyFact.textContent = `(${response.data})`;
+      funnyFact.classList.remove("empty");
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+if (funnyFact) {
+  generateFact(matchesNumber.textContent);
+}
+
+generateBtn?.addEventListener("click", async (e) => {
   e.preventDefault();
+  await Notification.requestPermission();
+  new Notification("Added 5 new applicants");
   axios
     .post(`/api/generate-applicants/5`)
     .then((response) => {
       const currentNumber = matchesNumber.textContent;
       const newNumber = parseInt(currentNumber) + response.data.data.length;
       matchesNumber.textContent = newNumber;
+      generateFact(newNumber);
     })
     .catch((error) => {
       console.log(error);
@@ -41,7 +61,7 @@ deleteSaved?.forEach((btn) => {
     axios
       .post(`/api/delete-applicant/${userId}`)
       .then((response) => {
-        document.querySelector(".cv").remove();
+        btn.closest(".cv").remove();
       })
       .catch((error) => {
         console.log(error);

@@ -68,6 +68,8 @@
 
 ## About The Project
 
+### PLEASE VIEW THIS LIKE A MOBILE APPLICATION. IT WAS NOT MADE FOR DESKTOP.
+
 This is a school project for the HVA. I was tasked with making a feature for a matching application.
 
 My feature is the matching / managing of applications in a job finding app.

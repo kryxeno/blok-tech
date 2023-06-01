@@ -43,7 +43,7 @@ router.post("/contacts", async (req, res) => {
 
 router.post("/api/generate-applicants/:amount", async (req, res) => {
   const applicants = faker.createFakeApplicants(req.params.amount);
-  const insert = await db.insertMany("match", "company_user", applicants);
+  const insert = await db.insertMany("match", "users", applicants);
   if (!insert) {
     res.json({ success: false });
     return;

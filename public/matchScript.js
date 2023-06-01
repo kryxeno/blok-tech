@@ -1,8 +1,30 @@
 const ignoreBtns = document.querySelectorAll(".btn-ignore");
 const saveBtns = document.querySelectorAll(".btn-save");
 const cvList = document.querySelector(".cv-list");
+const hiddenCvs = document.querySelectorAll(".cv:not(:first-of-type)");
 
 cvList.classList.add("animated-scroll");
+
+const onVisible = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.remove("hidden");
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+let options = {
+  root: document.querySelector("body"),
+  rootMargin: "0px",
+  threshold: 0.3,
+};
+let observer = new IntersectionObserver(onVisible, options);
+
+hiddenCvs.forEach((cv) => {
+  cv.classList.add("hidden");
+  observer.observe(cv);
+});
 
 const updateSeen = async (id) => {
   const res = await axios
