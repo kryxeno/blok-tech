@@ -25,3 +25,5 @@
 
 - HVA
 - https://chat.openai.com/
+- https://www.expatica.com/nl/working/finding-a-job/online-jobs-netherlands-74601/
+- https://www.trustsignals.com/blog/color-psychology-and-trust-why-the-colors-your-brand-uses-matters

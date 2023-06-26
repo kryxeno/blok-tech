@@ -1,5 +1,7 @@
 # Job Story
 
+In order to better understand the features, I have created a few job stories that in one sentence describe what the feature is. The focus is on the functionality of the feature. I will then choose one of the job stories to develop the feature.
+
 ![ja](./images/job-stories.jpeg)
 
 1. Wanneer ik een app open wil ik een account aan kunnen maken, omdat ik mijn gegevens op wil slaan. (Account)
@@ -14,4 +16,4 @@
 
 # My feature
 
-I have chosen to make the third job story. Matching a company with an applicant.
+I have chosen to make the third job story. Matching a company with an applicant. I chose to pursue this job story because making a functioning 'swipe' feature sounds like an interesting challenge, and it is the core of the application.

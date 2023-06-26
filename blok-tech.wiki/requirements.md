@@ -1,5 +1,8 @@
 # Requirements List
 
+The feature I will develop is: "When I see multiple users, I want to match or ignore the users so that I can potentially match with the right person".
+In order to define what this feature needs and what is optional, I have made a requirements list. I can look back on this during the development of the application to see whether or not I am on the right track (I should first be working on the must tasks).
+
 The application must...
 
 1. ...let companies see the applicants of their job post
