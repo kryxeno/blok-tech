@@ -48,6 +48,8 @@
   </p>
 </div>
 
+![ja](/public/images/banner.png)
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -72,9 +74,9 @@
 
 This is a school project for the HVA. I was tasked with making a feature for a matching application.
 
-My feature is the matching / managing of applications in a job finding app.
+My feature is the matching / managing of applications in a job finding app. This application has been made for businesses and individuals looking for a job to match using a tinder-style application for professionals.
 
-Companies can match with individuals, thus finding relevant applicants for the job posting.
+An applicant can upload their resume (not in this feature) and click through job offerings that match their criteria. Business can then look at these applicant and either ignore or save them to contacts list, where further contact can take place.
 
 ### Current features
 
